@@ -8,6 +8,7 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1")
     %link(href='//fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css')
     %link(href='//fonts.googleapis.com/css?family=Rosario:400,700italic,700,400italic' rel='stylesheet' type='text/css')
+    %link(href='//fonts.googleapis.com/css?family=Nunito:300,400,700' rel='stylesheet' type='text/css')
     %link(href='//fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css')
     = favicon_link_tag 'favicon.png'
     = yield :head
@@ -36,22 +37,7 @@
 
             Also: follow [@hashrockettil](https://twitter.com/hashrockettil) to inject your Twitter feed with knowledge.
 
-    %aside.site_search
-      .search_fields
-        = form_tag root_path, method: 'get' do
-          = search_field_tag :q
-          = submit_tag 'Search', name: nil
-        = link_to "search", "#", class: "aside_toggle"
-
     %footer.site_footer
-      %p
-        You can follow us on Twitter.
-        = link_to "@hashrockettil", "https://twitter.com/hashrockettil"
       %p
         TIL is an open source project.
         = link_to "visit us on Github", "https://github.com/hashrocket/hr-til"
-      %p
-        curated in Jacksonville and Chicago
-        %br/
-        by
-        = link_to 'Hashrocket', 'https://hashrocket.com'
